@@ -1,5 +1,7 @@
 # 🎧 AI Audio Analyzer — Portfolio Demo
 
+<img width="1899" height="851" alt="Screenshot from 2026-07-02 13-17-37" src="https://github.com/user-attachments/assets/3be6295f-4aa8-4d46-8a45-e8fce7b1c58d" />
+
 > **No API key. No account. No backend. Just open it and it works.**
 
 Upload an audio file (or pick one of three built-in scenarios), press **✨ Analyze with AI**, and watch a polished AI pipeline animate through six stages — then receive clean, professional summaries in **four languages simultaneously**: Kazakh, English, Chinese (Simplified) and Russian.
