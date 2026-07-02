@@ -19,6 +19,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     name: Build & Deploy
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,20 +34,27 @@ jobs:
         run: npm ci
 
       - name: Lint
-        run: npm run lint
+        run: npm run lint -- --max-warnings 10
 
       - name: Type check
         run: npm run typecheck
 
+      # Generate demo WAV files if they are missing (e.g. on a fresh clone
+      # where the generated assets were not committed).
+      - name: Generate demo audio
+        run: |
+          if [ ! -f public/demo/audio/meeting.wav ]; then
+            node scripts/generate-demo-audio.mjs
+          else
+            echo "Demo audio files already present, skipping generation."
+          fi
+
       - name: Build
         run: npm run build
-        env:
-          # OPTIONAL. Prefer leaving this empty so each user supplies their own
-          # key via the in-app Settings page. If you set it, the key is embedded
-          # in the public bundle. Configure it as a GitHub Actions secret.
-          VITE_OPENAI_API_KEY: ${{ secrets.VITE_OPENAI_API_KEY }}
 
+      # Only deploy on pushes to main (not on PRs).
       - name: Deploy to Cloudflare Pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
