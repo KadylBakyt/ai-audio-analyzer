@@ -1,24 +1,23 @@
-name: Deploy to Cloudflare Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
-  pull_request:
     branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
-  deployments: write
+  pages: write
+  id-token: write
 
 concurrency:
-  group: pages-${{ github.ref }}
-  cancel-in-progress: true
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-    name: Build & Deploy
+    name: Build
 
     steps:
       - name: Checkout
@@ -39,8 +38,6 @@ jobs:
       - name: Type check
         run: npm run typecheck
 
-      # Generate demo WAV files if they are missing (e.g. on a fresh clone
-      # where the generated assets were not committed).
       - name: Generate demo audio
         run: |
           if [ ! -f public/demo/audio/meeting.wav ]; then
@@ -52,11 +49,21 @@ jobs:
       - name: Build
         run: npm run build
 
-      # Only deploy on pushes to main (not on PRs).
-      - name: Deploy to Cloudflare Pages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: cloudflare/wrangler-action@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=ai-audio-analyzer
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
