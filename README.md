@@ -1,5 +1,7 @@
 # 🎧 AI Audio Analyzer — Portfolio Demo
 
+Demo: https://kadylbakyt.github.io/ai-audio-analyzer/
+
 <img width="1899" height="851" alt="Screenshot from 2026-07-02 13-17-37" src="https://github.com/user-attachments/assets/3be6295f-4aa8-4d46-8a45-e8fce7b1c58d" />
 
 > **No API key. No account. No backend. Just open it and it works.**
