@@ -1,0 +1,106 @@
+{
+  "app": {
+    "name": "AI Audio Analyzer",
+    "tagline": "Multilingual AI summaries"
+  },
+  "nav": {
+    "home": "Home",
+    "github": "GitHub",
+    "toggleTheme": "Toggle theme",
+    "language": "Language",
+    "lightMode": "Light mode",
+    "darkMode": "Dark mode"
+  },
+  "hero": {
+    "title": "AI Audio Analyzer",
+    "subtitle": "Upload audio and instantly generate multilingual AI summaries.",
+    "badge": "✨ Demo — no API key required"
+  },
+  "upload": {
+    "title": "Upload your audio",
+    "dragActive": "Drop the file here…",
+    "dragInactive": "Drag & drop an audio file here",
+    "or": "or try a built-in demo",
+    "browse": "Browse files",
+    "supported": "MP3, WAV, M4A, AAC, OGG, FLAC — up to 25 MB",
+    "remove": "Remove file",
+    "duration": "Duration",
+    "size": "Size",
+    "play": "Play preview",
+    "replace": "Replace file"
+  },
+  "demo": {
+    "orTryDemo": "or try a built-in demo",
+    "meeting": {
+      "title": "Business Meeting",
+      "subtitle": "Q3 review & roadmap"
+    },
+    "callCenter": {
+      "title": "Call Center",
+      "subtitle": "Billing support call"
+    },
+    "medical": {
+      "title": "Medical Consult",
+      "subtitle": "Cardiology consultation"
+    }
+  },
+  "magic": {
+    "analyze": "Analyze with AI",
+    "analyzing": "Analyzing…",
+    "hint": "AI responses are simulated for demo purposes — no API key or account required."
+  },
+  "pipeline": {
+    "steps": {
+      "uploading": "Uploading",
+      "transcribing": "Transcribing",
+      "understanding": "Understanding",
+      "generating": "Generating",
+      "translating": "Translating"
+    },
+    "captions": {
+      "uploading": "Uploading audio file…",
+      "transcribing": "Transcribing speech to text…",
+      "understanding": "Understanding context & intent…",
+      "generating": "Generating AI summary…",
+      "translating": "Translating into 4 languages…"
+    }
+  },
+  "results": {
+    "title": "Multilingual summaries",
+    "subtitle": "Generated at {{time}}",
+    "successBanner": "Analysis complete — summaries generated in 4 languages.",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "copyAll": "Copy all",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "downloadTxt": "Download TXT",
+    "downloadJson": "Download JSON",
+    "downloadMd": "Download Markdown",
+    "clear": "Clear results",
+    "words": "{{count}} words",
+    "chars": "{{count}} chars",
+    "readingTime": "{{count}} min read",
+    "transcriptTitle": "Raw transcript",
+    "transcriptToggle": "Show transcript",
+    "transcriptHide": "Hide transcript"
+  },
+  "empty": {
+    "title": "No summaries yet",
+    "subtitle": "Upload an audio file or pick a demo scenario, then press Analyze with AI."
+  },
+  "errors": {
+    "title": "Something went wrong",
+    "retry": "Try again",
+    "dismiss": "Dismiss",
+    "unsupported_file": "Unsupported file type. Please upload MP3, WAV, M4A, AAC, OGG or FLAC.",
+    "file_too_large": "File is too large. The maximum size is 25 MB.",
+    "no_file": "Please select an audio file or a demo scenario first.",
+    "demo_load_failed": "Could not load the demo result. Please try again.",
+    "unknown": "An unexpected error occurred. Please try again."
+  },
+  "footer": {
+    "builtWith": "Portfolio demo — built with React + Vite. No backend, no API key required.",
+    "privacy": "All AI responses are simulated locally for demonstration purposes."
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "app": {
+    "name": "AI 音频分析器",
+    "tagline": "多语言 AI 摘要"
+  },
+  "nav": {
+    "home": "首页",
+    "github": "GitHub",
+    "toggleTheme": "切换主题",
+    "language": "语言",
+    "lightMode": "浅色模式",
+    "darkMode": "深色模式"
+  },
+  "hero": {
+    "title": "AI 音频分析器",
+    "subtitle": "上传音频，即刻生成多语言 AI 摘要。",
+    "badge": "✨ 演示 — 无需 API 密钥"
+  },
+  "upload": {
+    "title": "上传你的音频",
+    "dragActive": "将文件拖放到这里…",
+    "dragInactive": "将音频文件拖放到此处",
+    "or": "或",
+    "browse": "浏览文件",
+    "supported": "MP3、WAV、M4A、AAC、OGG、FLAC — 最大 25 MB",
+    "remove": "移除文件",
+    "duration": "时长",
+    "size": "大小",
+    "play": "试听",
+    "replace": "更换文件"
+  },
+  "demo": {
+    "orTryDemo": "或选择内置演示场景",
+    "meeting": {
+      "title": "商务会议",
+      "subtitle": "Q3 回顾与路线图"
+    },
+    "callCenter": {
+      "title": "客服中心",
+      "subtitle": "账单支持通话"
+    },
+    "medical": {
+      "title": "医疗咨询",
+      "subtitle": "心脏科会诊"
+    }
+  },
+  "magic": {
+    "analyze": "使用 AI 分析",
+    "analyzing": "分析中…",
+    "hint": "AI 回复为演示目的模拟生成 — 无需 API 密钥或账户。"
+  },
+  "pipeline": {
+    "steps": {
+      "uploading": "上传中",
+      "transcribing": "语音转写",
+      "understanding": "理解上下文",
+      "generating": "生成摘要",
+      "translating": "多语言翻译"
+    },
+    "captions": {
+      "uploading": "正在上传音频文件…",
+      "transcribing": "正在将语音转为文字…",
+      "understanding": "正在理解上下文与意图…",
+      "generating": "正在生成 AI 摘要…",
+      "translating": "正在翻译为 4 种语言…"
+    }
+  },
+  "results": {
+    "title": "多语言摘要",
+    "subtitle": "生成于 {{time}}",
+    "successBanner": "分析完成 — 已生成 4 种语言的摘要。",
+    "copy": "复制",
+    "copied": "已复制！",
+    "copyAll": "全部复制",
+    "expand": "展开",
+    "collapse": "收起",
+    "downloadTxt": "下载 TXT",
+    "downloadJson": "下载 JSON",
+    "downloadMd": "下载 Markdown",
+    "clear": "清除结果",
+    "words": "{{count}} 词",
+    "chars": "{{count}} 字符",
+    "readingTime": "阅读约 {{count}} 分钟",
+    "transcriptTitle": "原始转写文本",
+    "transcriptToggle": "显示转写文本",
+    "transcriptHide": "隐藏转写文本"
+  },
+  "empty": {
+    "title": "还没有摘要",
+    "subtitle": "上传音频文件或选择演示场景，然后点击「使用 AI 分析」。"
+  },
+  "errors": {
+    "title": "出错了",
+    "retry": "重试",
+    "dismiss": "关闭",
+    "unsupported_file": "不支持的文件类型。请上传 MP3、WAV、M4A、AAC、OGG 或 FLAC。",
+    "file_too_large": "文件过大。最大为 25 MB。",
+    "no_file": "请先选择音频文件或演示场景。",
+    "demo_load_failed": "无法加载演示结果，请重试。",
+    "unknown": "发生了意外错误。请重试。"
+  },
+  "footer": {
+    "builtWith": "作品集演示 — 使用 React + Vite 构建。无后端，无需 API 密钥。",
+    "privacy": "所有 AI 回复均在本地模拟生成，仅供演示使用。"
+  }
+}
